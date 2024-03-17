@@ -23,8 +23,9 @@
     "@angular/platform-server": "^17.1.0",
     "@angular/router": "^17.1.0",
     "@angular/ssr": "^17.1.1",
-    "@lapo/asn1js": "^1.2.4",
+    "asn1js": "^3.0.5",
     "express": "^4.18.2",
+    "pkijs": "^3.0.16",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

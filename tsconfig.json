@@ -18,7 +18,12 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+    "noImplicitAny": false,
     "useDefineForClassFields": false,
+    "typeRoots": [
+      "./typings",
+      "./node_modules/@types/"
+    ],
     "lib": [
       "ES2022",
       "dom"
