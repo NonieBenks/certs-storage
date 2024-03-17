@@ -14,7 +14,8 @@ import { CertificateFilterPipe } from '../shared/pipes/certificate-filter.pipe';
 })
 export class CertificatesListComponent {
   public listOfCertificates: Array<Certificate> = [];
-  public selectedCertificate: Certificate = new Certificate();
+  public selectedCertificate: Certificate =
+    this.certificateService.getCertificateByKey('cert_1');
   public COMMON_NAME_OID = '2.5.4.3';
 
   constructor(private certificateService: CertificateService) {}
