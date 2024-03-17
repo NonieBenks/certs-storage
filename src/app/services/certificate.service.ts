@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import * as asn1js from 'asn1js';
 import { Certificate } from 'pkijs';
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CertificateService {
-  private displayedCertificate = new BehaviorSubject<Certificate>(
-    this.getCertificateByKey('cert_1')
-  );
+  private displayedCertificate = new Subject<Certificate>();
   public COMMON_NAME_OID = '2.5.4.3';
 
   readFile(file: File): void {
@@ -41,7 +39,7 @@ export class CertificateService {
     return storedData ? JSON.parse(storedData) : null;
   }
 
-  getDisplayedCertificate(): BehaviorSubject<Certificate> {
+  getDisplayedCertificate(): Subject<Certificate> {
     return this.displayedCertificate;
   }
 
