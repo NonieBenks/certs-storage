@@ -1,0 +1,12 @@
+<div class="container">
+    <button mat-stroked-button (click)="goToHomePage()">Назад</button>
+    <div class="drag-drop-area"
+    (dragover)="onDragOver($event)"
+    (drop)="onDrop($event)">
+        <p>Перетягніть файл сертифікату сюди <br> або</p>
+        <label class="file-input">
+            <input hidden type="file" (change)="onFileSelected($event)">
+            Виберіть через стандартний діалог
+        </label>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="controls-container">
+        <div class="add-button">
+            <label class="file-input">
+                <input hidden type="file" (change)="onFileSelected($event)">
+                Додати
+            </label>
+        </div>
+        <mat-selection-list [multiple]="false">
+            @for(item of listOfCertificates; track $index) {
+                <mat-list-option (click)="onItemSelected(item)">{{ item.subject | certificateFilter: this.COMMON_NAME_OID }}</mat-list-option>
+            }
+        </mat-selection-list>
+    </div>
+    <app-certificate [certificate]="this.selectedCertificate"></app-certificate>
+</div>

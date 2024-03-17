@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <p><b>Common Name: </b> {{ this.certificate.subject | certificateFilter: this.COMMON_NAME_OID }}</p>
+            <p><b>Issuer CN: </b> {{ this.certificate.issuer | certificateFilter: this.COMMON_NAME_OID }}</p>
+            <p><b>Valid From: </b> {{ this.certificate.notBefore.value | date: 'yyyy-MM-dd' }}</p>
+            <p><b>Valid To: </b> {{ this.certificate.notAfter.value | date: 'yyyy-MM-dd' }} </p>
+        </mat-card-content>
+    </mat-card>
+</div>

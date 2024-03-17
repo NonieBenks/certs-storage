@@ -1,15 +1,1 @@
-<div class="container">
-  <div class="controls-container">
-    <label class="file-input">
-      <input hidden type="file" (change)="onFileSelected($event)">
-      Додати
-    </label>
-    <p>Немає жодного сертифікату</p>
-  </div>
-  <div class="drag-drop-area" 
-     (dragover)="onDragOver($event)" 
-     (drop)="onDrop($event)">
-  <p>Перетягніть файл сертифікату сюди <br> або</p>
-</div>
-  <app-certificate></app-certificate>
-</div>
+<router-outlet></router-outlet>
